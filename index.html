@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Sunday Routine</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #6c63ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 14px 20px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #575757;
+    }
+    section {
+      display: none;
+      padding: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    img {
+      width: 250px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>My Sunday Routine</h1>
+  <p>A glimpse into my relaxing and productive Sundays</p>
+</header>
+
+<nav>
+  <button onclick="showTab('morning')">Morning</button>
+  <button onclick="showTab('afternoon')">Afternoon</button>
+  <button onclick="showTab('evening')">Evening</button>
+</nav>
+
+<section id="morning" class="active">
+  <h2>Morning 🌅</h2>
+  <p>I start my Sunday with a calm morning walk and breakfast.</p>
+  <img src="https://source.unsplash.com/250x200/?morning,walk">
+</section>
+
+<section id="afternoon">
+  <h2>Afternoon ☀️</h2>
+  <p>I spend time on hobbies like coding, reading, or watching shows.</p>
+  <img src="https://source.unsplash.com/250x200/?coding">
+</section>
+
+<section id="evening">
+  <h2>Evening 🌇</h2>
+  <p>I relax with family or go out. Sometimes I write about my day (blog style).</p>
+  <img src="https://source.unsplash.com/250x200/?sunset">
+</section>
+
+<script>
+  function showTab(tabId) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(tabId).classList.add("active");
+  }
+</script>
+
+</body>
+</html>
